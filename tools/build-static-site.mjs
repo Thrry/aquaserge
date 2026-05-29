@@ -208,7 +208,7 @@ const pages = {
   <div class="hero-content">
     <p class="eyebrow">${escapeHtml(data.home.eyebrow)}</p>
     <h1>${escapeHtml(data.home.headline)}</h1>
-    <p>${escapeHtml(data.home.lede)}</p>
+    ${data.home.lede ? `<p>${escapeHtml(data.home.lede)}</p>` : ""}
     <div class="actions">
       <a class="button" href="${escapeAttr(data.home.primaryCta.url)}">${escapeHtml(data.home.primaryCta.label)}</a>
       <a class="button secondary" href="${escapeAttr(data.home.secondaryCta.url)}">${escapeHtml(data.home.secondaryCta.label)}</a>
