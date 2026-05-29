@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "node tools/build-static-site.mjs",
+    "preview": "python3 -m http.server 4173 --directory site-static",
+    "export": "npm run build && cd site-static && zip -qr ../aquaserge-site-static.zip ."
+  },
+  "devDependencies": {}
+}

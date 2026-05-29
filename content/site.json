@@ -1,0 +1,493 @@
+{
+  "site": {
+    "name": "Aquaserge",
+    "url": "https://www.aquaserge.com",
+    "language": "fr",
+    "locale": "fr_FR",
+    "description": "Aquaserge, groupe de pop expérimentale entre chanson oblique, jazz libre et formes électriques.",
+    "location": "Treignac, France",
+    "logo": "assets/images/026-aquaserge-logo.png",
+    "heroImage": "assets/images/012-photo-12.jpg",
+    "ogImage": "assets/images/012-photo-12.jpg",
+    "email": "contact@aquaserge.com",
+    "copyrightYear": "2026"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "index.html",
+      "key": "home"
+    },
+    {
+      "label": "BLACKLISTÉ",
+      "url": "blackliste.html",
+      "key": "blacklist"
+    },
+    {
+      "label": "Tour dates",
+      "url": "jobs.html",
+      "key": "jobs"
+    },
+    {
+      "label": "Discography",
+      "url": "discography.html",
+      "key": "discography"
+    },
+    {
+      "label": "Imagery",
+      "url": "imagery.html",
+      "key": "imagery"
+    },
+    {
+      "label": "Contact",
+      "url": "index.html#contact",
+      "key": "contact"
+    }
+  ],
+  "social": [
+    {
+      "label": "Bandcamp",
+      "url": "https://aquaserge.bandcamp.com/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/aquaserge_/"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCAoGxCguM1QeSj2Rf4DWWsw"
+    },
+    {
+      "label": "Spotify",
+      "url": "https://open.spotify.com/intl-fr/artist/1XOKresOiQtBmduOEskf4s?si=o6xrUu40QJKPnU8Z04W20w"
+    }
+  ],
+  "home": {
+    "title": "Aquaserge | musique expérimentale",
+    "description": "Site officiel d'Aquaserge : albums, concerts, vidéos, photos, contacts et actualités du groupe.",
+    "eyebrow": "Pop expérimentale depuis Toulouse et ailleurs",
+    "headline": "Aquaserge",
+    "lede": "Chanson oblique, jazz libre, formes électriques : Aquaserge avance entre le studio, la scène et les disques qui dérangent les catégories.",
+    "primaryCta": {
+      "label": "Écouter la dernière sortie",
+      "url": "https://aquaserge.bandcamp.com/album/la-fin-de-leconomie"
+    },
+    "secondaryCta": {
+      "label": "Voir les images",
+      "url": "imagery.html"
+    },
+    "latestRelease": "la-fin-de-leconomie",
+    "highlights": [
+      "Albums",
+      "Concerts",
+      "Vidéos",
+      "Presse & booking"
+    ]
+  },
+  "blacklist": {
+    "title": "Aquaserge BLACKLISTÉ",
+    "description": "Aquaserge et Les Oiseaux Cie lancent un recours après un refus de subventions et un signalement administratif.",
+    "headline": "BLACKLISTÉ",
+    "image": "assets/images/028-aquaserge-live.jpg",
+    "paragraphs": [
+      "Comme de nombreuses associations en France et notamment sur le plateau de Millevaches, notre association est blacklistée par les services de la préfecture et du ministère de l'intérieur.",
+      "Nous lançons une procédure de recours auprès de la DRAC Nouvelle-Aquitaine qui nous refuse dorénavant les subsides.",
+      "Nous avons lancé un appel à don pour nous aider à financer les frais d'avocat."
+    ],
+    "support": {
+      "label": "Participer à l'appel à don",
+      "url": "https://www.helloasso.com/associations/les-oiseaux-cie/collectes/aquaserge-blackliste"
+    }
+  },
+  "contacts": [
+    {
+      "role": "Informations",
+      "label": "Contact",
+      "url": "mailto:contact@aquaserge.com?subject=Aquaserge"
+    },
+    {
+      "role": "Management",
+      "label": "admin.prod@aquaserge.com",
+      "url": "mailto:admin.prod@aquaserge.com?subject=Aquaserge%20-%20Management"
+    },
+    {
+      "role": "Booking France",
+      "label": "France / Konsato",
+      "url": "mailto:gaetan@konsatomusic.com?subject=Aquaserge%20Booking%20France"
+    },
+    {
+      "role": "Booking Europe",
+      "label": "Europe / Ebbmusic",
+      "url": "mailto:marijn@ebbmusic.eu?subject=Aquaserge%20-%20Booking%20Europe"
+    },
+    {
+      "role": "Label",
+      "label": "Crammed Discs",
+      "url": "http://www.crammed.be/"
+    }
+  ],
+  "albums": [
+    {
+      "id": "new-information-order",
+      "title": "Aquaserge New Information Order",
+      "url": "https://aquaserge.bandcamp.com/album/aquaserge-new-information-order",
+      "image": "assets/images/029-aquaserge-new-information-order.jpg",
+      "year": "2025"
+    },
+    {
+      "id": "la-fin-de-leconomie",
+      "title": "La fin de l'économie",
+      "url": "https://aquaserge.bandcamp.com/album/la-fin-de-leconomie",
+      "image": "assets/images/027-la-fin-de-leconomie.jpg",
+      "year": "2024"
+    },
+    {
+      "id": "the-possibility",
+      "title": "The Possibility of a New Work for Aquaserge",
+      "url": "https://aquaserge.bandcamp.com/album/the-possibility-of-a-new-work-for-aquaserge",
+      "image": "assets/images/030-the-possibility-of-a-new-work-for-aqua.jpg",
+      "year": "2021"
+    },
+    {
+      "id": "deja-vous",
+      "title": "Déjà vous ?",
+      "url": "https://aquaserge.bandcamp.com/album/d-j-vous",
+      "image": "assets/images/031-deja-vous.jpg",
+      "year": "2018"
+    },
+    {
+      "id": "laisse-ca-etre",
+      "title": "Laisse ça être",
+      "url": "https://aquaserge.bandcamp.com/album/laisse-a-tre",
+      "image": "assets/images/032-laisse-ca-etre.jpg",
+      "year": "2017"
+    },
+    {
+      "id": "cest-extra",
+      "title": "C'est extra",
+      "url": "https://souterraine.bandcamp.com/album/cest-extra",
+      "image": "assets/images/033-c-est-extra.jpeg",
+      "year": "2016"
+    },
+    {
+      "id": "guerre-ep",
+      "title": "Guerre EP",
+      "url": "https://aquaserge.bandcamp.com/album/guerre-ep",
+      "image": "assets/images/034-guerre-ep.jpg",
+      "year": "2016"
+    },
+    {
+      "id": "a-lamitie",
+      "title": "À l'amitié",
+      "url": "https://aquaserge.bandcamp.com/album/a-lamiti",
+      "image": "assets/images/035-a-l-amitie.jpg",
+      "year": "2014"
+    },
+    {
+      "id": "tout-arrive",
+      "title": "Tout arrive / TVCQJVD",
+      "url": "https://aquaserge.bandcamp.com/album/tout-arrive-tvcqjvd-maxi",
+      "image": "assets/images/036-tout-arrive-tvcqjvd.jpg",
+      "year": "2014"
+    },
+    {
+      "id": "april-march",
+      "title": "April March & Aquaserge",
+      "url": "https://aprilmarchaquaserge.bandcamp.com/album/april-march-aquaserge",
+      "image": "assets/images/037-april-march-aquaserge.jpg",
+      "year": "2013"
+    },
+    {
+      "id": "ce-tres-cher-serge",
+      "title": "Ce très cher Serge",
+      "url": "https://aquaserge.bandcamp.com/album/ce-tr-s-cher-serge",
+      "image": "assets/images/038-ce-tres-cher-serge.jpg",
+      "year": "2011"
+    },
+    {
+      "id": "un-deux",
+      "title": "Un deux",
+      "url": "https://aquaserge.bandcamp.com/album/un-deux",
+      "image": "assets/images/039-un-deux.jpg",
+      "year": "2008"
+    },
+    {
+      "id": "tahiti-coco",
+      "title": "Tahiti Coco",
+      "url": "https://www.discogs.com/fr/release/2181033-Aquaserge-Tahiti-Coco",
+      "image": "assets/images/040-tahiti-coco.jpg",
+      "year": "2008"
+    }
+  ],
+  "tourDates": [
+    {
+      "date": "2025-08-25",
+      "displayDate": "25 août 2025",
+      "venue": "L'Amicale du Futur",
+      "note": "Avec le soutien de Wallonie-Bruxelles International",
+      "place": "Lyon, France"
+    },
+    {
+      "date": "2025-08-24",
+      "displayDate": "24 août 2025",
+      "venue": "Gigors Electric",
+      "note": "Avec le soutien de Wallonie-Bruxelles International",
+      "place": "Gigors-et-Lozeron, France"
+    },
+    {
+      "date": "2025-08-23",
+      "displayDate": "23 août 2025",
+      "venue": "La Pierre Noire",
+      "note": "Avec le soutien de Wallonie-Bruxelles International",
+      "place": "Champagnac, France"
+    },
+    {
+      "date": "2025-08-22",
+      "displayDate": "22 août 2025",
+      "venue": "Festival Les Poutres Apparentes, Le Cendar",
+      "place": "Pau, France"
+    },
+    {
+      "date": "2025-08-21",
+      "displayDate": "21 août 2025",
+      "venue": "Café du Burgaud",
+      "note": "Avec le soutien de Wallonie-Bruxelles International",
+      "place": "Le Burgaud, France"
+    },
+    {
+      "date": "2025-08-20",
+      "displayDate": "20 août 2025",
+      "venue": "Le Bois de la Logette",
+      "note": "Avec le soutien de Wallonie-Bruxelles International",
+      "place": "Concots, France"
+    },
+    {
+      "date": "2025-08-02",
+      "displayDate": "2 août 2025",
+      "venue": "L Abore Festival",
+      "place": "Heinsdorfergrund-Hauptmannsgrün, Allemagne"
+    },
+    {
+      "date": "2025-08-01",
+      "displayDate": "1 août 2025",
+      "venue": "Manufaktur",
+      "place": "Schorndorf, Allemagne"
+    },
+    {
+      "date": "2025-07-10",
+      "displayDate": "10 juillet 2025",
+      "venue": "Pohoda festival",
+      "place": "Trenčín, Slovaquie"
+    },
+    {
+      "date": "2025-06-25",
+      "displayDate": "25 juin 2025",
+      "venue": "Le Confort Moderne",
+      "place": "Poitiers, France"
+    },
+    {
+      "date": "2025-01-18",
+      "displayDate": "18 janvier 2025",
+      "venue": "La Sirène",
+      "place": "La Rochelle, France"
+    },
+    {
+      "date": "2025-01-17",
+      "displayDate": "17 janvier 2025",
+      "venue": "QUAI M",
+      "place": "La Roche-sur-Yon, France"
+    },
+    {
+      "date": "2024-11-12",
+      "displayDate": "12 novembre 2024",
+      "venue": "La flèche d'or",
+      "place": "Paris, France"
+    },
+    {
+      "date": "2024-10-12",
+      "displayDate": "12 octobre 2024",
+      "venue": "Le Bouche À Oreilles",
+      "place": "32420 Simorre, France"
+    },
+    {
+      "date": "2024-10-11",
+      "displayDate": "11 octobre 2024",
+      "venue": "Salle des Fêtes",
+      "place": "66820 Fillols, France"
+    },
+    {
+      "date": "2024-10-10",
+      "displayDate": "10 octobre 2024",
+      "venue": "Blonde Venus",
+      "place": "Bordeaux, France"
+    },
+    {
+      "date": "2024-10-09",
+      "displayDate": "9 octobre 2024",
+      "venue": "Le Metronum",
+      "place": "Toulouse, France"
+    },
+    {
+      "date": "2024-09-21",
+      "displayDate": "21 septembre 2024",
+      "venue": "Le Confort Moderne",
+      "place": "Poitiers, France"
+    },
+    {
+      "date": "2024-09-14",
+      "displayDate": "14 septembre 2024",
+      "venue": "Saint-Martin-de-Seignanx",
+      "place": "Saint-Martin-de-Seignanx, France"
+    },
+    {
+      "date": "2024-09-07",
+      "displayDate": "7 septembre 2024",
+      "venue": "Le Botanique",
+      "place": "Bruxelles, Belgique"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Aquaserge - Le Saut Du Tigre (Official Video)",
+      "youtubeId": "rj95CAdPsVk",
+      "duration": "03:04",
+      "thumbnail": "assets/images/017-aquaserge-le-saut-du-tigre-official-vi.jpg"
+    },
+    {
+      "title": "Aquaserge - Je suis galaxie (Official Video)",
+      "youtubeId": "moiLFLIN1mI",
+      "duration": "02:43",
+      "thumbnail": "assets/images/018-aquaserge-je-suis-galaxie-official-vid.jpg"
+    },
+    {
+      "title": "Aquaserge - Si loin, si proche (Official Video)",
+      "youtubeId": "OE9z9TWcoOI",
+      "duration": "06:18",
+      "thumbnail": "assets/images/019-aquaserge-si-loin-si-proche-official-v.jpg"
+    },
+    {
+      "title": "Aquaserge - Virage Sud (Official Video)",
+      "youtubeId": "K5wXvGQucSo",
+      "duration": "04:03",
+      "thumbnail": "assets/images/020-aquaserge-virage-sud-official-video.jpg"
+    },
+    {
+      "title": "Aquaserge - Si tu t'en vas (Léo Ferré) (Official Video)",
+      "youtubeId": "OzXLs9mTrYw",
+      "duration": "04:26",
+      "thumbnail": "assets/images/021-aquaserge-si-tu-t-en-vas-leo-ferre-off.jpg"
+    },
+    {
+      "title": "Aquaserge - Un grand sommeil noir (Official Video)",
+      "youtubeId": "kLzO2pUUm5Q",
+      "duration": "04:36",
+      "thumbnail": "assets/images/022-aquaserge-un-grand-sommeil-noir-offici.jpg"
+    },
+    {
+      "title": "Aquaserge - Tour du monde (Official Video)",
+      "youtubeId": "ZlXUniKHrX4",
+      "duration": "04:09",
+      "thumbnail": "assets/images/023-aquaserge-tour-du-monde-official-video.jpg"
+    },
+    {
+      "title": "Aquaserge - Nuit altérée (À György Ligeti) (Official Video)",
+      "youtubeId": "XWZwzeaSUrA",
+      "duration": "02:39",
+      "thumbnail": "assets/images/024-aquaserge-nuit-alteree-a-gyorgy-ligeti.jpg"
+    },
+    {
+      "title": "Aquaserge - Tout arrive (Clip officiel)",
+      "youtubeId": "amoy1kcJnV4",
+      "duration": "03:13",
+      "thumbnail": "assets/images/025-aquaserge-tout-arrive-clip-officiel.jpg"
+    }
+  ],
+  "photos": [
+    {
+      "alt": "Aquaserge photo 1",
+      "src": "assets/images/001-photo-1.jpeg"
+    },
+    {
+      "alt": "Aquaserge photo 2",
+      "src": "assets/images/002-photo-2.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 3",
+      "src": "assets/images/003-photo-3.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 4",
+      "src": "assets/images/004-photo-4.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 5",
+      "src": "assets/images/005-photo-5.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 6",
+      "src": "assets/images/006-photo-6.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 7",
+      "src": "assets/images/007-photo-7.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 8",
+      "src": "assets/images/008-photo-8.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 9",
+      "src": "assets/images/009-photo-9.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 10",
+      "src": "assets/images/010-photo-10.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 11",
+      "src": "assets/images/011-photo-11.png"
+    },
+    {
+      "alt": "Aquaserge photo 12",
+      "src": "assets/images/012-photo-12.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 13",
+      "src": "assets/images/013-photo-13.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 14",
+      "src": "assets/images/014-photo-14.jpg"
+    },
+    {
+      "alt": "Aquaserge photo 15",
+      "src": "assets/images/015-photo-15.jpeg"
+    },
+    {
+      "alt": "Aquaserge photo 16",
+      "src": "assets/images/016-photo-16.jpg"
+    }
+  ],
+  "pages": {
+    "discography": {
+      "title": "Discographie | Aquaserge",
+      "description": "Discographie complète d'Aquaserge : albums, EP et sorties à écouter sur Bandcamp et plateformes."
+    },
+    "jobs": {
+      "title": "Concerts | Aquaserge",
+      "description": "Dates de concert et archives de tournée d'Aquaserge."
+    },
+    "imagery": {
+      "title": "Vidéos et photos | Aquaserge",
+      "description": "Vidéos officielles, clips et photos d'Aquaserge."
+    },
+    "pro": {
+      "title": "Espace pro | Aquaserge",
+      "description": "Contacts professionnels d'Aquaserge pour presse, booking, management et label."
+    },
+    "privacy": {
+      "title": "Confidentialité et mentions légales | Aquaserge",
+      "description": "Mentions légales, confidentialité et informations de contact du site Aquaserge."
+    }
+  }
+}
