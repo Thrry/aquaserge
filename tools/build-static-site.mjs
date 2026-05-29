@@ -203,41 +203,35 @@ const pages = {
     title: data.home.title,
     description: data.home.description,
     main: `
-<section class="home-poster" aria-labelledby="home-title">
-  <div class="poster-paper">
-    <div class="poster-panel panel-red" aria-hidden="true"></div>
-    <div class="poster-panel panel-blue" aria-hidden="true"></div>
-    <img class="poster-photo poster-photo-left" src="${asset(data.photos[0].src)}" alt="" loading="eager" decoding="async">
-    <img class="poster-photo poster-photo-main" src="${asset(data.site.heroImage)}" alt="Aquaserge" loading="eager" decoding="async" fetchpriority="high">
-    <img class="poster-photo poster-photo-side" src="${asset(data.photos[7].src)}" alt="" loading="eager" decoding="async">
-    <div class="poster-scrap scrap-blue" aria-hidden="true"></div>
-    <div class="poster-scrap scrap-yellow" aria-hidden="true"></div>
-    <div class="poster-count" aria-hidden="true"><span>01</span><span>02</span><span>03</span></div>
-    <div class="poster-title-block">
-      <p class="eyebrow">${escapeHtml(data.home.eyebrow)}</p>
-      <h1 id="home-title">${escapeHtml(data.home.headline)}</h1>
+<section class="home-hero" style="--hero-image: url('${asset(data.site.heroImage)}')">
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <p class="eyebrow">${escapeHtml(data.home.eyebrow)}</p>
+    <h1>${escapeHtml(data.home.headline)}</h1>
+    ${data.home.lede ? `<p>${escapeHtml(data.home.lede)}</p>` : ""}
+    <div class="actions">
+      <a class="button" href="${escapeAttr(data.home.primaryCta.url)}">${escapeHtml(data.home.primaryCta.label)}</a>
+      <a class="button secondary" href="${escapeAttr(data.home.secondaryCta.url)}">${escapeHtml(data.home.secondaryCta.label)}</a>
     </div>
-    <a class="release-ticket" href="${escapeAttr(latest.url)}" aria-label="Écouter ${escapeAttr(latest.title)}">
-      <span>Dernière sortie</span>
-      <strong>${escapeHtml(latest.title)}</strong>
-      <img src="${asset(latest.image)}" alt="Pochette de ${escapeAttr(latest.title)}" loading="eager" decoding="async">
-      <em>Listen / Order</em>
-    </a>
   </div>
-  <div class="home-date-peek" aria-labelledby="home-live-title">
-    <h2 id="home-live-title">Tour dates</h2>
-    <div class="home-date-list">
-      ${data.tourDates.slice(0, 3).map((event) => `
-      <a href="./jobs.html">
-        <time datetime="${escapeAttr(event.date)}">${escapeHtml(event.displayDate)}</time>
-        <strong>${escapeHtml(event.venue)}</strong>
-        <span>${escapeHtml(event.place)}</span>
-        <b aria-hidden="true">+</b>
-      </a>`).join("")}
-    </div>
+  <div class="hero-tags" aria-label="Repères">
+    ${data.home.highlights.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
   </div>
 </section>
-<section class="section home-records" aria-labelledby="disc-title">
+<section class="section feature-release" aria-labelledby="latest-title">
+  <div class="wrap feature-grid">
+    <div>
+      <div class="section-kicker">Dernière sortie</div>
+      <h2 id="latest-title" class="section-title">${escapeHtml(latest.title)}</h2>
+      <p class="large-text">Un point d'entrée direct vers le disque, les plateformes et l'univers actuel du groupe.</p>
+      <a class="text-link" href="${escapeAttr(latest.url)}">Écouter sur Bandcamp</a>
+    </div>
+    <a class="cover-feature" href="${escapeAttr(latest.url)}">
+      <img src="${asset(latest.image)}" alt="Pochette de ${escapeAttr(latest.title)}" loading="eager" decoding="async" fetchpriority="high">
+    </a>
+  </div>
+</section>
+<section class="section" aria-labelledby="disc-title">
   <div class="wrap">
     <div class="section-kicker">Discographie</div>
     <h2 id="disc-title" class="section-title">Albums et sorties</h2>
@@ -440,14 +434,13 @@ ${contacts("./")}`
 
 const css = `
 :root {
-  --bg: #eee5d3;
-  --paper: #f4ecdc;
-  --ink: #11100e;
+  --bg: #f4f0e6;
+  --paper: #fffaf0;
+  --ink: #151512;
   --muted: #706b5e;
-  --line: #cdbf9f;
-  --red: #e53a32;
-  --blue: #0f5c86;
-  --yellow: #e8c51f;
+  --line: #d8cfbd;
+  --red: #df2438;
+  --blue: #235f97;
   --green: #376b4f;
   --shadow: 0 18px 60px rgba(21, 21, 18, .12);
   color-scheme: light;
@@ -461,11 +454,11 @@ a { color: inherit; text-decoration: none; }
 a:hover { color: var(--red); }
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 1000; background: var(--ink); color: var(--paper); padding: 10px 14px; border-radius: 4px; }
 .skip-link:focus { top: 12px; }
-.site-header { position: sticky; top: 0; z-index: 20; background: #050505; border-bottom: 1px solid #23201a; }
-.header-inner { max-width: 1440px; min-height: 64px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 8px 28px; }
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(244, 240, 230, .92); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+.header-inner { max-width: 1180px; min-height: 74px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 10px 22px; }
 .logo { display: inline-flex; align-items: center; }
-.logo img { width: 190px; max-width: 42vw; display: block; filter: saturate(1.15) contrast(1.05); }
-.nav { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px clamp(14px, 2.8vw, 42px); color: #f4ecdc; font-size: 13px; line-height: 1; text-transform: uppercase; font-weight: 900; }
+.logo img { width: 210px; max-width: 42vw; display: block; }
+.nav { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px 18px; font-size: 13px; line-height: 1; text-transform: uppercase; font-weight: 700; }
 .nav a { padding: 10px 0; border-bottom: 2px solid transparent; }
 .nav a.active { color: var(--red); border-color: currentColor; }
 main { min-height: 70vh; }
@@ -479,38 +472,15 @@ main { min-height: 70vh; }
 .large-text, .text-panel { max-width: 780px; color: var(--muted); font-size: clamp(18px, 2vw, 24px); line-height: 1.45; }
 .text-panel { display: grid; gap: 18px; color: var(--ink); }
 .text-panel p, .large-text { margin: 0 0 20px; }
-.home-poster { position: relative; min-height: calc(100svh - 64px); overflow: hidden; background: #050505; }
-.poster-paper { position: relative; min-height: clamp(560px, 78svh, 820px); overflow: hidden; background: var(--paper); isolation: isolate; border-bottom: 1px solid #050505; }
-.poster-paper::before { content: ""; position: absolute; inset: 0; z-index: 10; pointer-events: none; opacity: .32; mix-blend-mode: multiply; background-image: radial-gradient(#111 0.8px, transparent 0.8px), linear-gradient(90deg, rgba(17,16,14,.09) 1px, transparent 1px), linear-gradient(rgba(17,16,14,.07) 1px, transparent 1px); background-size: 5px 5px, 78px 100%, 100% 86px; }
-.poster-paper::after { content: ""; position: absolute; inset: 0; z-index: 11; pointer-events: none; background: radial-gradient(circle at 24% 12%, transparent 0 18%, rgba(244,236,220,.18) 19% 21%, transparent 22%), linear-gradient(108deg, transparent 0 56%, rgba(17,16,14,.06) 56.2% 56.6%, transparent 57%); }
-.poster-panel { position: absolute; z-index: 1; top: 0; bottom: 0; mix-blend-mode: multiply; }
-.panel-red { left: 0; width: 15vw; min-width: 124px; background: var(--red); opacity: .86; }
-.panel-blue { left: 15vw; width: 8vw; min-width: 78px; background: var(--blue); opacity: .86; }
-.poster-photo { position: absolute; display: block; object-fit: cover; filter: grayscale(1) contrast(1.32); mix-blend-mode: multiply; }
-.poster-photo-left { z-index: 2; left: 0; bottom: 0; width: min(25vw, 340px); height: 58%; object-position: center; opacity: .94; clip-path: polygon(0 0, 86% 8%, 100% 100%, 0 100%); }
-.poster-photo-main { z-index: 3; left: clamp(120px, 18vw, 300px); bottom: -2%; width: min(70vw, 1080px); height: 48%; object-position: center 38%; opacity: .92; clip-path: polygon(4% 12%, 100% 0, 95% 100%, 0 90%); }
-.poster-photo-side { z-index: 2; right: -2vw; top: 0; width: min(20vw, 300px); height: 100%; object-position: center; opacity: .68; clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 83%); }
-.poster-scrap { position: absolute; z-index: 4; mix-blend-mode: multiply; transform: rotate(-2deg); }
-.scrap-blue { right: 19vw; top: 8%; width: 90px; height: 64px; background: var(--blue); }
-.scrap-yellow { right: 4vw; top: 24%; width: 140px; height: 360px; background: var(--yellow); clip-path: polygon(10% 0, 100% 6%, 84% 100%, 0 86%); opacity: .9; }
-.poster-title-block { position: relative; z-index: 6; width: min(100% - 48px, 940px); margin-left: clamp(138px, 16vw, 255px); padding-top: clamp(70px, 12vh, 135px); }
-.poster-title-block h1 { margin: 0; color: #0b0a09; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", Arial, Helvetica, sans-serif; font-size: clamp(62px, 11.8vw, 172px); line-height: .82; text-transform: uppercase; letter-spacing: 0; transform: scaleY(1.12); transform-origin: left top; text-shadow: 1px 0 0 #0b0a09, -1px 0 0 #0b0a09; }
-.eyebrow { margin: 0 0 18px; color: var(--red); font-size: 13px; font-weight: 900; text-transform: uppercase; }
-.poster-count { position: absolute; z-index: 6; left: 34px; bottom: 34px; display: grid; gap: 8px; color: #111; font-size: 14px; font-weight: 900; }
-.poster-count span:first-child { color: var(--red); }
-.release-ticket { position: absolute; z-index: 12; right: clamp(20px, 8vw, 150px); bottom: 0; width: min(244px, 23vw); min-width: 210px; display: grid; gap: 10px; padding: 20px 20px 0; background: #0b0a09; color: var(--paper); box-shadow: 0 18px 38px rgba(0,0,0,.28); }
-.release-ticket span { color: var(--red); font-size: 13px; font-weight: 900; text-transform: uppercase; }
-.release-ticket strong { font-size: clamp(23px, 2.2vw, 34px); line-height: .92; text-transform: uppercase; }
-.release-ticket img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 0; filter: contrast(1.05); }
-.release-ticket em { margin: 4px -20px 0; padding: 17px 20px; background: var(--red); color: #fff; font-style: normal; font-size: 14px; font-weight: 900; text-transform: uppercase; }
-.home-date-peek { position: relative; z-index: 8; display: grid; grid-template-columns: minmax(250px, 39vw) minmax(0, 1fr); min-height: 190px; border-top: 1px solid #050505; background: #050505; color: var(--paper); }
-.home-date-peek h2 { margin: 0; padding: 42px clamp(22px, 4vw, 58px); background: var(--paper); color: #111; font-size: clamp(42px, 7.5vw, 112px); line-height: .82; text-transform: uppercase; }
-.home-date-list { display: grid; align-content: center; padding: 22px clamp(20px, 4vw, 58px); }
-.home-date-list a { display: grid; grid-template-columns: 118px minmax(0, 1fr) minmax(120px, .8fr) 24px; gap: 22px; align-items: center; padding: 16px 0; border-bottom: 1px solid rgba(244,236,220,.15); }
-.home-date-list time, .home-date-list span { color: #cfc5b2; font-size: 14px; text-transform: uppercase; }
-.home-date-list strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 17px; text-transform: uppercase; }
-.home-date-list b { color: var(--yellow); font-size: 24px; line-height: 1; }
-.home-records { background: var(--bg); }
+.home-hero { position: relative; min-height: calc(100svh - 74px); display: grid; align-items: end; overflow: hidden; background: #111 var(--hero-image) center / cover no-repeat; }
+.home-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 22%; background: linear-gradient(to bottom, transparent, var(--bg)); }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.34) 48%, rgba(0,0,0,.1)); }
+.hero-content { position: relative; z-index: 1; width: min(980px, calc(100% - 44px)); margin: 0 auto; padding: 80px 0 120px; color: #fffaf0; }
+.hero-content h1 { margin: 0 0 18px; font-size: clamp(58px, 13vw, 148px); line-height: .82; text-transform: uppercase; }
+.hero-content p:not(.eyebrow) { max-width: 720px; margin: 0; font-size: clamp(20px, 2.3vw, 30px); line-height: 1.3; }
+.eyebrow { margin: 0 0 18px; color: #f3d950; font-size: 13px; font-weight: 800; text-transform: uppercase; }
+.hero-tags { position: relative; z-index: 1; width: min(1180px, calc(100% - 44px)); margin: -72px auto 28px; display: flex; flex-wrap: wrap; gap: 10px; color: #fffaf0; }
+.hero-tags span { border: 1px solid rgba(255,250,240,.55); padding: 8px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; backdrop-filter: blur(8px); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .button { display: inline-flex; align-items: center; min-height: 44px; border: 2px solid var(--ink); border-radius: 4px; padding: 11px 15px; background: var(--ink); color: var(--paper); font-weight: 800; text-align: center; white-space: normal; }
 .button:hover { background: var(--red); border-color: var(--red); color: #fff; }
@@ -568,31 +538,14 @@ main { min-height: 70vh; }
   .header-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
   .logo img { max-width: 70vw; }
   .nav { justify-content: flex-start; gap: 2px 14px; font-size: 12px; }
-  .poster-title-block { margin-left: clamp(126px, 24vw, 210px); width: min(100% - 28px, 760px); }
-  .poster-title-block h1 { font-size: clamp(54px, 12.2vw, 108px); }
-  .release-ticket { right: 24px; width: 230px; }
-  .home-date-peek { grid-template-columns: 1fr; }
-  .home-date-peek h2 { padding: 32px 22px 18px; }
-  .home-date-list { padding: 0 22px 28px; }
 }
 @media (max-width: 860px) {
-  .poster-paper { min-height: 660px; }
-  .panel-red { width: 90px; min-width: 90px; }
-  .panel-blue { left: 90px; width: 58px; min-width: 58px; }
-  .poster-photo-left { width: 150px; height: 54%; }
-  .poster-photo-main { left: 66px; bottom: 122px; width: 92vw; height: 34%; }
-  .poster-photo-side, .scrap-yellow { opacity: .38; }
-  .scrap-blue { right: 22px; top: 132px; width: 72px; height: 52px; }
-  .poster-title-block { margin-left: 22px; padding-top: 182px; width: calc(100% - 36px); }
-  .poster-title-block h1 { font-size: clamp(40px, 13.6vw, 72px); }
-  .release-ticket { right: 16px; bottom: 0; width: 214px; min-width: 0; padding: 16px 16px 0; }
-  .release-ticket strong { font-size: 22px; }
-  .release-ticket em { margin-left: -16px; margin-right: -16px; padding: 14px 16px; }
-  .poster-count { left: 20px; bottom: 145px; }
-  .home-date-list a { grid-template-columns: 1fr 22px; gap: 8px 14px; }
-  .home-date-list time, .home-date-list span { grid-column: 1; }
-  .home-date-list b { grid-column: 2; grid-row: 1 / span 3; justify-self: end; }
+  .home-hero { min-height: 680px; }
+  .hero-content { padding: 70px 0 118px; }
+  .hero-content h1 { font-size: clamp(38px, 12.2vw, 82px); }
+  .hero-content p:not(.eyebrow) { font-size: 19px; }
   .eyebrow { line-height: 1.15; font-size: 12px; }
+  .hero-tags { margin-top: -88px; }
   .section { padding: 52px 0; }
   .feature-grid, .split-hero { grid-template-columns: 1fr; }
   .album-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -600,11 +553,7 @@ main { min-height: 70vh; }
   .page-title { font-size: clamp(48px, 17vw, 92px); }
 }
 @media (max-width: 460px) {
-  .wrap { width: min(100% - 30px, 1180px); }
-  .poster-title-block .eyebrow { display: inline-block; max-width: 210px; padding: 3px 5px; background: rgba(244,236,220,.78); color: #11100e; }
-  .poster-title-block h1 { width: 128%; font-size: clamp(42px, 14.2vw, 54px); transform: scaleX(.78) scaleY(1.12); }
-  .release-ticket { width: 190px; }
-  .release-ticket img { display: none; }
+  .wrap, .hero-content, .hero-tags { width: min(100% - 30px, 1180px); }
   .album-strip, .album-grid, .video-grid, .contact-grid { grid-template-columns: 1fr; }
   .button { width: 100%; justify-content: center; }
 }

@@ -36,53 +36,35 @@
     </div>
   </header>
   <main id="content">
-<section class="home-poster" aria-labelledby="home-title">
-  <div class="poster-paper">
-    <div class="poster-panel panel-red" aria-hidden="true"></div>
-    <div class="poster-panel panel-blue" aria-hidden="true"></div>
-    <img class="poster-photo poster-photo-left" src="./assets/images/001-photo-1.jpeg" alt="" loading="eager" decoding="async">
-    <img class="poster-photo poster-photo-main" src="./assets/images/012-photo-12.jpg" alt="Aquaserge" loading="eager" decoding="async" fetchpriority="high">
-    <img class="poster-photo poster-photo-side" src="./assets/images/008-photo-8.jpg" alt="" loading="eager" decoding="async">
-    <div class="poster-scrap scrap-blue" aria-hidden="true"></div>
-    <div class="poster-scrap scrap-yellow" aria-hidden="true"></div>
-    <div class="poster-count" aria-hidden="true"><span>01</span><span>02</span><span>03</span></div>
-    <div class="poster-title-block">
-      <p class="eyebrow">Pop expérimentale depuis Toulouse et ailleurs</p>
-      <h1 id="home-title">Aquaserge</h1>
+<section class="home-hero" style="--hero-image: url('./assets/images/012-photo-12.jpg')">
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Pop expérimentale depuis Toulouse et ailleurs</p>
+    <h1>Aquaserge</h1>
+    
+    <div class="actions">
+      <a class="button" href="https://aquaserge.bandcamp.com/album/la-fin-de-leconomie">Écouter la dernière sortie</a>
+      <a class="button secondary" href="imagery.html">Voir les images</a>
     </div>
-    <a class="release-ticket" href="https://aquaserge.bandcamp.com/album/la-fin-de-leconomie" aria-label="Écouter La fin de l&#39;économie">
-      <span>Dernière sortie</span>
-      <strong>La fin de l'économie</strong>
-      <img src="./assets/images/027-la-fin-de-leconomie.jpg" alt="Pochette de La fin de l&#39;économie" loading="eager" decoding="async">
-      <em>Listen / Order</em>
-    </a>
   </div>
-  <div class="home-date-peek" aria-labelledby="home-live-title">
-    <h2 id="home-live-title">Tour dates</h2>
-    <div class="home-date-list">
-      
-      <a href="./jobs.html">
-        <time datetime="2025-08-25">25 août 2025</time>
-        <strong>L'Amicale du Futur</strong>
-        <span>Lyon, France</span>
-        <b aria-hidden="true">+</b>
-      </a>
-      <a href="./jobs.html">
-        <time datetime="2025-08-24">24 août 2025</time>
-        <strong>Gigors Electric</strong>
-        <span>Gigors-et-Lozeron, France</span>
-        <b aria-hidden="true">+</b>
-      </a>
-      <a href="./jobs.html">
-        <time datetime="2025-08-23">23 août 2025</time>
-        <strong>La Pierre Noire</strong>
-        <span>Champagnac, France</span>
-        <b aria-hidden="true">+</b>
-      </a>
-    </div>
+  <div class="hero-tags" aria-label="Repères">
+    <span>Albums</span><span>Concerts</span><span>Vidéos</span><span>Presse &amp; booking</span>
   </div>
 </section>
-<section class="section home-records" aria-labelledby="disc-title">
+<section class="section feature-release" aria-labelledby="latest-title">
+  <div class="wrap feature-grid">
+    <div>
+      <div class="section-kicker">Dernière sortie</div>
+      <h2 id="latest-title" class="section-title">La fin de l'économie</h2>
+      <p class="large-text">Un point d'entrée direct vers le disque, les plateformes et l'univers actuel du groupe.</p>
+      <a class="text-link" href="https://aquaserge.bandcamp.com/album/la-fin-de-leconomie">Écouter sur Bandcamp</a>
+    </div>
+    <a class="cover-feature" href="https://aquaserge.bandcamp.com/album/la-fin-de-leconomie">
+      <img src="./assets/images/027-la-fin-de-leconomie.jpg" alt="Pochette de La fin de l&#39;économie" loading="eager" decoding="async" fetchpriority="high">
+    </a>
+  </div>
+</section>
+<section class="section" aria-labelledby="disc-title">
   <div class="wrap">
     <div class="section-kicker">Discographie</div>
     <h2 id="disc-title" class="section-title">Albums et sorties</h2>
