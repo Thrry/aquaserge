@@ -494,7 +494,7 @@ main { min-height: 70vh; }
 .scrap-blue { right: 19vw; top: 8%; width: 90px; height: 64px; background: var(--blue); }
 .scrap-yellow { right: 4vw; top: 24%; width: 140px; height: 360px; background: var(--yellow); clip-path: polygon(10% 0, 100% 6%, 84% 100%, 0 86%); opacity: .9; }
 .poster-title-block { position: relative; z-index: 6; width: min(100% - 48px, 940px); margin-left: clamp(138px, 16vw, 255px); padding-top: clamp(70px, 12vh, 135px); }
-.poster-title-block h1 { margin: 0; color: #0b0a09; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", Arial, Helvetica, sans-serif; font-size: clamp(70px, 13.6vw, 202px); line-height: .78; text-transform: uppercase; letter-spacing: 0; transform: scaleY(1.18); transform-origin: left top; text-shadow: 1px 0 0 #0b0a09, -1px 0 0 #0b0a09; }
+.poster-title-block h1 { margin: 0; color: #0b0a09; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", Arial, Helvetica, sans-serif; font-size: clamp(62px, 11.8vw, 172px); line-height: .82; text-transform: uppercase; letter-spacing: 0; transform: scaleY(1.12); transform-origin: left top; text-shadow: 1px 0 0 #0b0a09, -1px 0 0 #0b0a09; }
 .eyebrow { margin: 0 0 18px; color: var(--red); font-size: 13px; font-weight: 900; text-transform: uppercase; }
 .poster-count { position: absolute; z-index: 6; left: 34px; bottom: 34px; display: grid; gap: 8px; color: #111; font-size: 14px; font-weight: 900; }
 .poster-count span:first-child { color: var(--red); }
@@ -569,7 +569,7 @@ main { min-height: 70vh; }
   .logo img { max-width: 70vw; }
   .nav { justify-content: flex-start; gap: 2px 14px; font-size: 12px; }
   .poster-title-block { margin-left: clamp(126px, 24vw, 210px); width: min(100% - 28px, 760px); }
-  .poster-title-block h1 { font-size: clamp(62px, 14vw, 128px); }
+  .poster-title-block h1 { font-size: clamp(54px, 12.2vw, 108px); }
   .release-ticket { right: 24px; width: 230px; }
   .home-date-peek { grid-template-columns: 1fr; }
   .home-date-peek h2 { padding: 32px 22px 18px; }
@@ -584,7 +584,7 @@ main { min-height: 70vh; }
   .poster-photo-side, .scrap-yellow { opacity: .38; }
   .scrap-blue { right: 22px; top: 132px; width: 72px; height: 52px; }
   .poster-title-block { margin-left: 22px; padding-top: 182px; width: calc(100% - 36px); }
-  .poster-title-block h1 { font-size: clamp(45px, 15.3vw, 84px); }
+  .poster-title-block h1 { font-size: clamp(40px, 13.6vw, 72px); }
   .release-ticket { right: 16px; bottom: 0; width: 214px; min-width: 0; padding: 16px 16px 0; }
   .release-ticket strong { font-size: 22px; }
   .release-ticket em { margin-left: -16px; margin-right: -16px; padding: 14px 16px; }
@@ -602,7 +602,7 @@ main { min-height: 70vh; }
 @media (max-width: 460px) {
   .wrap { width: min(100% - 30px, 1180px); }
   .poster-title-block .eyebrow { display: inline-block; max-width: 210px; padding: 3px 5px; background: rgba(244,236,220,.78); color: #11100e; }
-  .poster-title-block h1 { width: 128%; font-size: clamp(50px, 16.8vw, 62px); transform: scaleX(.78) scaleY(1.18); }
+  .poster-title-block h1 { width: 128%; font-size: clamp(42px, 14.2vw, 54px); transform: scaleX(.78) scaleY(1.12); }
   .release-ticket { width: 190px; }
   .release-ticket img { display: none; }
   .album-strip, .album-grid, .video-grid, .contact-grid { grid-template-columns: 1fr; }
